@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bee Move</title>
+
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+    
+    <style>
+      body {
+
+        margin: 0;
+        padding: 0;
+      }
+
+      #title {
+        margin-top: 50px;
+        text-align: center;
+      }
+      #title img {
+        width:35%;
+      }
+
+      /* Small devices (phones, 1px and up) */
+      @media (min-width: 1px) { 
+        #title img {
+          width: 60%;
+        }
+      }
+
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) { 
+        #title img {
+          width: 35%;
+        }
+      }
+
+      /* Medium devices (tablets, 768px and up) */
+      @media (min-width: 768px) { 
+
+      }
+
+      /* Large devices (desktops, 992px and up) */
+      @media (min-width: 992px) { 
+
+      }
+
+      /* X-Large devices (large desktops, 1200px and up) */
+      @media (min-width: 1200px) {
+
+      }
+
+      /* XX-Large devices (larger desktops, 1400px and up) */
+      @media (min-width: 1400px) {
+
+      }
+
+
+      #Mitsu {
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 55%;
+      }
+      
+
+      
+      #Bee_Moving {
+        -moz-transform:rotate(25deg);
+        -webkit-transform:rotate(25deg);
+        -o-transform:rotate(25deg);
+        -ms-transform:rotate(25deg);
+        transform:rotate(25deg);
+        
+
+      }
+      #Bee_Moving2 {
+
+        -moz-transform:rotate(-30deg);
+        -webkit-transform:rotate(-30deg);
+        -o-transform:rotate(-30deg);
+        -ms-transform:rotate(-30deg);
+        transform:rotate(-30deg);
+
+      }
+      #Bee_Moving3 {
+        -moz-transform:rotate(-25deg);
+        -webkit-transform:rotate(-25deg);
+        -o-transform:rotate(-25deg);
+        -ms-transform:rotate(-25deg);
+        transform:rotate(-25deg);
+      }
+
+
+      /* Small devices (phones, 1px and up) */
+      @media (min-width: 1px) { 
+        #Bee_Moving {
+          position: absolute;
+          bottom: 65%;
+          left: 15%;
+          height: 4%;
+        }
+        #Bee_Moving2 {
+          position: absolute;
+          bottom: 64%;
+          right: 15%;
+          height: 4%;
+        }
+        #Bee_Moving3 {
+          position: absolute;
+          bottom: 50%;
+          right: 18%;
+          height: 4%;
+        }
+      }
+
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) { 
+        #Bee_Moving {
+          left: 20%;
+        }
+        #Bee_Moving2 {
+          right: 20%;
+        }
+        #Bee_Moving3 {
+          right: 23%;
+        }
+      }
+      /* Medium devices (tablets, 768px and up) */
+      @media (min-width: 768px) { 
+        #Bee_Moving {
+          left: 25%;
+          height: 5%;
+        }
+        #Bee_Moving2 {
+          right: 25%;
+          height: 5%;
+        }
+        #Bee_Moving3 {
+          right: 28%;
+          height: 5%;
+        }
+      }
+
+      /* Large devices (desktops, 992px and up) */
+      @media (min-width: 992px) { 
+        #Bee_Moving {
+          left: 30%;
+        }
+        #Bee_Moving2 {
+          right: 30%;
+        }
+        #Bee_Moving3 {
+          right: 33%;
+        }
+
+      }
+
+      /* X-Large devices (large desktops, 1200px and up) */
+      @media (min-width: 1200px) {
+        #Bee_Moving {
+          left: 35%;
+        }
+        #Bee_Moving2 {
+          right: 35%;
+        }
+        #Bee_Moving3 {
+          right: 38%;
+        }
+      }
+
+      /* XX-Large devices (larger desktops, 1400px and up) */
+      @media (min-width: 1400px) {
+
+      }
+
+
+
+      
+      /* section 3*/
+      #Bee_Moving4 {
+        width:8%;
+
+        margin-top:10%;
+        margin-left: 15%;
+        -moz-transform:rotate(20deg);
+        -webkit-transform:rotate(20deg);
+        -o-transform:rotate(20deg);
+        -ms-transform:rotate(20deg);
+        transform:rotate(20deg);
+
+      }
+
+      #Bee_Moving5 {
+        width:8%;
+        display: block;
+        margin-top:5%;
+        margin-left: 70%;
+        -moz-transform:rotate(-25deg);
+        -webkit-transform:rotate(-25deg);
+        -o-transform:rotate(-25deg);
+        -ms-transform:rotate(-25deg);
+        transform:rotate(-25deg);
+
+      }
+      #Bee_Moving6 {
+        width:8%;
+
+        margin-top:5%;
+        margin-left: 25%;
+        -moz-transform:rotate(20deg);
+        -webkit-transform:rotate(20deg);
+        -o-transform:rotate(20deg);
+        -ms-transform:rotate(20deg);
+        transform:rotate(20deg);
+
+      }
+
+      div, section, span, ul, li, a {
+        box-sizing: border-box;
+      }
+      section {
+        position:relative;
+        float: left;
+        width: 100%;
+        height: 100vh;
+
+        background-image: url("assets/img/BG-0.jpg");
+        background-size: 100% 100vh;
+      }
+      
+      #section2 {
+        background-image: url("assets/img/BG-1.jpg");
+      }
+      #section3 {
+        background-image: url("assets/img/BG-2.jpg");
+      }
+      footer {
+        position:relative;
+        float: left;
+        width: 100%;
+        height: 50vh;
+
+        background-image: url("assets/img/BG-3.jpg");
+        background-size: 100% 50vh;
+      }
+      
+
+
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) { 
+
+      }
+
+      /* Medium devices (tablets, 768px and up) */
+      @media (min-width: 768px) { 
+
+      }
+
+      /* Large devices (desktops, 992px and up) */
+      @media (min-width: 992px) { 
+
+      }
+
+      /* X-Large devices (large desktops, 1200px and up) */
+      @media (min-width: 1200px) {
+
+      }
+
+      /* XX-Large devices (larger desktops, 1400px and up) */
+      @media (min-width: 1400px) {
+
+      }
+      
+      button {
+        margin: 10px;
+        position: relative;
+        display:block;
+        width: 250px;
+        height: 60px;
+        border: none;
+        background: none;
+        z-index: 0;
+        transition: all .2s ease-in-out;
+      }
+      button:hover, button:active {
+        transform: scale(1.1);
+      }
+      /* hover effect */
+      
+      button:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #d8a379, #fffb00, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100%);
+        height: calc(100%);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+      }
+      button:hover:before {
+          opacity: 1;
+      }
+
+      @keyframes glowing {
+          0% { background-position: 0 0; }
+          50% { background-position: 400% 0; }
+          100% { background-position: 0 0; }
+      }
+      /* hover effect end */
+
+      button img {
+        width: 100%;
+      }
+      #button_wrapper1 {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+    
+
+      /* 트위터, 오픈씨 링크 아이콘 */
+      #icon_wrapper1 {
+        position:absolute;
+        bottom: 20px;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+      }
+      #icon_wrapper1 img {
+        width: 60px;
+        height: 60px;
+        transition: all .2s ease-in-out;
+      }
+      #icon_wrapper1 img:hover {
+        transform: scale(1.2);
+      }
+      #icon_wrapper2 {
+        width:100%;
+      }
+      #icon_wrapper2 img {
+
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        transition: all .2s ease-in-out;
+      }
+      #icon_wrapper2 img:hover {
+        transform: scale(1.2);
+      }
+      /* section 3 버튼 가운데 정렬 */
+      #section3 {
+        position: relative;
+      }
+      #button_wrapper2 {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      .carousel.slide {
+        
+        top:50%;
+        transform: translateY(-50%);
+      }
+      /* carousel 가운데 정렬 */
+      .carousel-item img {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        max-height: 100vh;
+        
+      }
+      /* carousel 컨트롤 아이콘 */
+      .carousel-control-prev-icon {
+        width: 100px;
+        height: 100px;
+        background-image: url("assets/img/Button_left.png");
+
+        
+      }
+      .carousel-control-next-icon {
+        width: 100px;
+        height: 100px;
+        background-image: url("assets/img/Button_right.png");
+
+        
+      }
+
+      #jar {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width:12%;
+      }
+
+
+      #elements_wrapper {
+        text-align: center;
+        margin: auto;
+        width : 100%;
+      }
+      #elements_wrapper > img, button{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #elements_wrapper > img:first-child {
+        margin-top:30px;
+        margin-bottom: 30px;
+      }
+      #elements_wrapper2 > a {
+        display:block;
+        margin: 20px;
+      }
+      #elements_wrapper2 img {
+        transition: all .2s ease-in-out;
+      }
+      #elements_wrapper2 img:hover {
+        transform: scale(1.2);
+      }
+    </style>
+    <script>
+      function openInNewTab(url) {
+        window.open(url, '_blank').focus();
+      }
+
+      
+    </script>
+</head>
+<body>
+    <section id="section1">
+      <div id="title">
+        <img src="assets/img/LOGO.png" />
+      </div>
+
+      
+      <video id="Mitsu" autoplay loop muted playsinline>
+          <source src="assets/video/Mitsu.webm" type="video/webm">
+          <source src="assets/video/Mitsu.mov" type="video/quicktime">
+      </video>
+      <video id="Bee_Moving" autoplay loop muted playsinline>
+        <source src="assets/video/Bee_Moving.webm#t=1" type="video/webm">
+        <source src="assets/video/Bee_Moving.mov#t=1" type="video/quicktime">
+      </video>
+      <video id="Bee_Moving2" autoplay loop muted playsinline>
+        <source src="assets/video/Bee_Moving.webm#t=2" type="video/webm">
+        <source src="assets/video/Bee_Moving.mov#t=2" type="video/quicktime">
+      </video>
+      <video id="Bee_Moving3" autoplay loop muted playsinline>
+        <source src="assets/video/Bee_Moving.webm#t=0.7" type="video/webm">
+        <source src="assets/video/Bee_Moving.mov#t=0.7" type="video/quicktime">
+      </video>
+      <div id="icon_wrapper1">
+        <a onClick=openInNewTab("https://twitter.com/beemove_nft")><img src="assets/img/twitter.png" /></a>
+        <a onClick=openInNewTab("https://opensea.io/collection/bee-move")><img src="assets/img/opensea.png" /></a>
+      </div>
+
+
+      <div id="button_wrapper1">
+        <button id="button_discord" onClick=openInNewTab("https://discord.gg/yGCk8VPGtk")>
+          <img src="assets/img/Join-the-Discord.png"/>
+        </button>
+        <button id="button_mint" onClick=alert() disabled>
+          <img src="assets/img/Mint.png" />
+        </button>
+      </div>
+    </section>
+ 
+    <section id="section2">
+
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block" src="assets/img/roadmap_en.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block" src="assets/img/roadmap_ko.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block" src="assets/img/roadmap_jp.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+
+    </section>
+
+    <section id="section3">
+      <video id="Bee_Moving4" autoplay loop muted playsinline>
+        <source src="assets/video/Bee_Moving.webm#t=1" type="video/webm">
+        <source src="assets/video/Bee_Moving.mov#t=1" type="video/quicktime">
+      </video>
+      <video id="Bee_Moving5" autoplay loop muted playsinline>
+        <source src="assets/video/Bee_Moving.webm#t=2" type="video/webm">
+        <source src="assets/video/Bee_Moving.mov#t=2" type="video/quicktime">
+      </video>
+      <video id="Bee_Moving6" autoplay loop muted playsinline>
+        <source src="assets/video/Bee_Moving.webm#t=0.5" type="video/webm">
+        <source src="assets/video/Bee_Moving.mov#t=0.5" type="video/quicktime">
+      </video>
+      <div id="button_wrapper2">
+        <button id="button_dao" onClick=openInNewTab("https://snapshot.org/#/beemove.eth")>
+          <img src="assets/img/DAO.png" />
+        </button>
+      </div>
+      <img id="jar" src="assets/img/honey.png" />
+    </section>
+    <footer>
+      <div id="elements_wrapper">
+        <img src="assets/img/LOGO_sm.png" />
+        <button onClick=openInNewTab("https://discord.gg/yGCk8VPGtk")>
+          <img src="assets/img/Join-the-Discord.png" />
+        </button>
+        <div id="icon_wrapper2">
+          <a onClick=openInNewTab("https://twitter.com/beemove_nft")><img src="assets/img/twitter_sm.png" /></a>
+          <a onClick=openInNewTab("https://opensea.io/collection/bee-move")><img src="assets/img/opensea_sm.png" /></a>
+        </div>
+        <div id ="elements_wrapper2">
+          <a><img src="assets/img/Terms.png"/></a>
+          <a><img src="assets/img/About.png"/></a>
+        </div>
+      </div>
+
+    </footer>
+
+</body>
+</html>
