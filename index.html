@@ -249,13 +249,42 @@
         background-image: url("assets/img/BG-0.jpg");
         background-size: 100% 100vh;
       }
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 1px) { 
+        #section1 {
+          background-image: url("assets/img/mobile/BG-m-1.jpg");
+        }
+        #section2 {
+          width: 100vw;
+          height: 100vw;
+          background-image: url("assets/img/mobile/BG-m-2_1.jpg");
+          background-size: 100%;
+        }
+        #section3 {
+          width: 100vw;
+          height: 100vw;
+          background-image: url("assets/img/mobile/BG-m-2_2.jpg");
+          background-size: 100% 100%;
+        }
+      }
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) { 
+        #section1 {
+          background-image: url("assets/img/BG-0.jpg");
+        }
+        #section2 {
+          width: 100%;
+          height: 100vh;
+          background-image: url("assets/img/BG-1.jpg");
+        }
+        #section3 {
+          width: 100%;
+          height: 100vh;
+          background-image: url("assets/img/BG-2.jpg");
+        }
+      }
       
-      #section2 {
-        background-image: url("assets/img/BG-1.jpg");
-      }
-      #section3 {
-        background-image: url("assets/img/BG-2.jpg");
-      }
+      
 
 
       footer {
@@ -360,27 +389,27 @@
         position: absolute;
         bottom: 15%;
         left: 50%;
-        width: 150px;
+        width: 200px;
         transform: translateX(-50%);
       }
       /* Small devices (landscape phones, 576px and up) */
       @media (min-width: 1px) { 
-        #button_wrapper1 {
-          width: 150px;
-        }
-        #button_wrapper2 {
-          /*DAO button*/
-          width: 200px;
-        }
-      }
-      /* Small devices (landscape phones, 576px and up) */
-      @media (min-width: 576px) { 
         #button_wrapper1 {
           width: 200px;
         }
         #button_wrapper2 {
           /*DAO button*/
           width: 250px;
+        }
+      }
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) { 
+        #button_wrapper1 {
+          width: 250px;
+        }
+        #button_wrapper2 {
+          /*DAO button*/
+          width: 300px;
         }
       }
     
@@ -394,8 +423,8 @@
         text-align: center;
       }
       #icon_wrapper1 img {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         margin: 5px;
         transition: all .2s ease-in-out;
       }
@@ -408,8 +437,8 @@
       }
       #icon_wrapper2 img {
 
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         
         margin: 5px;
         transition: all .2s ease-in-out;
@@ -477,7 +506,7 @@
         
       }
       #elements_wrapper {
-        width: 150px;
+        width: 200px;
         margin: auto;
       }
       #elements_wrapper > img, button{
@@ -487,13 +516,14 @@
       }
       #elements_wrapper > img:first-child {
         /* footer_logo */
-        margin-top:30px;
-        margin-bottom: 10px;
+        margin-top:40px;
+        margin-bottom: 20px;
         
         width: 150px;
       }
      
 
+      /* Terms, About */
       #elements_wrapper2 > a {
         display:block;
         margin-top: 20px;
@@ -505,7 +535,7 @@
         margin-bottom: 20px;
       }
       #elements_wrapper2 img {
-        width:50px;
+        width:40px;
       }
       #elements_wrapper2 img {
         transition: all .2s ease-in-out;
