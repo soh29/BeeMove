@@ -290,51 +290,64 @@
         position: relative;
         display:block;
         width: 100%;
-        height: auto;
         border: none;
         background: none;
         z-index: 0;
         transition: all .2s ease-in-out;
       }
-      button:hover, button:active {
-        transform: scale(1.1);
-      }
-      /* hover effect */
-      /*
-      button:before {
-        content: '';
-        background: linear-gradient(45deg, #ff0000, #d8a379, #fffb00, #ff0000);
-        position: absolute;
-        top: -2px;
-        left:-2px;
-        background-size: 400%;
-        z-index: -1;
-        filter: blur(5px);
-        width: calc(100%);
-        height: calc(100%);
-        animation: glowing 20s linear infinite;
-        opacity: 0;
-        transition: opacity .3s ease-in-out;
-        border-radius: 10px;
-      }
-      button:hover:before {
-          opacity: 1;
+      
+      
+      /* Large devices (desktops, 992px and up) */
+      @media (min-width: 992px) { 
+        button:hover, button:active {
+          transform: scale(1.1);
+        }
+        #icon_wrapper1 img:hover {
+          transform: scale(1.2);
+        }
+        #icon_wrapper2 img:hover {
+          transform: scale(1.2);
+        }
+        /* hover effect */
+
+        button:before {
+          content: '';
+          background: linear-gradient(45deg, #ff0000, #d8a379, #fffb00, #ff0000);
+          position: absolute;
+          top: -2px;
+          left:-2px;
+          background-size: 400%;
+          z-index: -1;
+          filter: blur(5px);
+          width: calc(100%);
+          height: calc(100%);
+          animation: glowing 20s linear infinite;
+          opacity: 0;
+          transition: opacity .3s ease-in-out;
+          border-radius: 10px;
+        }
+        button:hover:before {
+            opacity: 1;
+        }
+
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        /* hover effect end */
       }
 
-      @keyframes glowing {
-          0% { background-position: 0 0; }
-          50% { background-position: 400% 0; }
-          100% { background-position: 0 0; }
-      }
-      /* hover effect end */
+      
 
       button img {
         width: 100%;
       }
       #button_wrapper1 {
         position: absolute;
-        bottom: 10%;
+        bottom: 15%;
         left: 50%;
+        width: 200px;
         transform: translateX(-50%);
       }
 
@@ -343,19 +356,21 @@
       /* 트위터, 오픈씨 링크 아이콘 */
       #icon_wrapper1 {
         position:absolute;
-        bottom: 20px;
+        bottom: 3%;
         width: 100%;
         height: 60px;
         text-align: center;
       }
       #icon_wrapper1 img {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
+        margin: 5px;
         transition: all .2s ease-in-out;
       }
-      #icon_wrapper1 img:hover {
-        transform: scale(1.2);
-      }
+
+
+
+
       #icon_wrapper2 {
         width:100%;
       }
@@ -367,9 +382,7 @@
         margin-right: 10px;
         transition: all .2s ease-in-out;
       }
-      #icon_wrapper2 img:hover {
-        transform: scale(1.2);
-      }
+      
       /* section 3 버튼 가운데 정렬 */
       #section3 {
         position: relative;
@@ -438,8 +451,23 @@
         margin-right: auto;
       }
       #elements_wrapper > img:first-child {
+        /* footer_logo */
         margin-top:30px;
         margin-bottom: 30px;
+        width: 40%;
+      }
+      /* Small devices (phones, 1px and up) */
+      @media (min-width: 1px) { 
+        #elements_wrapper > img:first-child {
+        width: 40%;
+      }
+      }
+
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) { 
+        #title img {
+          width: 20%;
+        }
       }
       #elements_wrapper2 > a {
         display:block;
@@ -545,7 +573,7 @@
     </section>
     <footer>
       <div id="elements_wrapper">
-        <img src="assets/img/LOGO_sm.png" />
+        <img id="footer_logo" src="assets/img/LOGO_sm.png" />
         <button onClick=openInNewTab("https://discord.gg/yGCk8VPGtk")>
           <img src="assets/img/Join-the-Discord.png" />
         </button>
