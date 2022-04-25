@@ -448,6 +448,7 @@
       #section3 {
         position: relative;
       }
+      /* dao button */
       #button_wrapper2 {
         margin: 0;
         position: absolute;
@@ -456,7 +457,22 @@
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
       }
-
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 1px) { 
+        #button_wrapper2 {
+          top: 35%;
+          -ms-transform: translate(-50%, -35%);
+          transform: translate(-50%, -35%);
+        }
+      }
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) { 
+        #button_wrapper2 {
+          top: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+      }
       .carousel.slide {
         top:50%;
         transform: translateY(-50%);
@@ -492,7 +508,7 @@
 
       #jar {
         position: absolute;
-        bottom: 5%;
+        bottom: 7%;
         left: 50%;
         transform: translateX(-50%);
         width:12%;
@@ -560,6 +576,7 @@
       <video id="Mitsu" autoplay loop muted playsinline>
           <source src="assets/video/Mitsu.webm" type="video/webm">
           <source src="assets/video/Mitsu.mov" type="video/quicktime">
+          <source src="assets/video/MITSU_before_converted.mov" type="video/quicktime">
       </video>
       <video id="Bee_Moving" autoplay loop muted playsinline>
         <source src="assets/video/Bee_Moving.webm#t=1" type="video/webm">
