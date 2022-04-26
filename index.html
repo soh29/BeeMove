@@ -111,7 +111,35 @@
         -ms-transform:rotate(-25deg);
         transform:rotate(-25deg);
       }
+      /* section 3*/
+      #Bee_Moving4 {
 
+        -moz-transform:rotate(20deg);
+        -webkit-transform:rotate(20deg);
+        -o-transform:rotate(20deg);
+        -ms-transform:rotate(20deg);
+        transform:rotate(20deg);
+
+      }
+
+      #Bee_Moving5 {
+
+        -moz-transform:rotate(-25deg);
+        -webkit-transform:rotate(-25deg);
+        -o-transform:rotate(-25deg);
+        -ms-transform:rotate(-25deg);
+        transform:rotate(-25deg);
+
+      }
+      #Bee_Moving6 {
+
+        -moz-transform:rotate(20deg);
+        -webkit-transform:rotate(20deg);
+        -o-transform:rotate(20deg);
+        -ms-transform:rotate(20deg);
+        transform:rotate(20deg);
+
+      }
 
       /* Small devices (phones, 1px and up) */
       @media (min-width: 1px) { 
@@ -133,6 +161,21 @@
           right: 18%;
           height: 4%;
         }
+
+
+
+        #Bee_Moving4 {
+          position: absolute;
+          bottom: 45%;
+          left: 15%;
+          height: 5%;
+        }
+        #Bee_Moving5 {
+          position: absolute;
+          bottom: 45%;
+          right: 13%;
+          height: 6%;
+        }
       }
 
       /* Small devices (landscape phones, 576px and up) */
@@ -146,20 +189,47 @@
         #Bee_Moving3 {
           right: 23%;
         }
+
+
+        #Bee_Moving4 {
+          position: absolute;
+          bottom: 40%;
+          left: 15%;
+          height: 5%;
+        }
+        #Bee_Moving5 {
+          position: absolute;
+          bottom: 40%;
+          right: 13%;
+          height: 6%;
+        }
       }
       /* Medium devices (tablets, 768px and up) */
       @media (min-width: 768px) { 
         #Bee_Moving {
           left: 25%;
-          height: 5%;
+          height: 6%;
         }
         #Bee_Moving2 {
           right: 25%;
-          height: 5%;
+          height: 7%;
         }
         #Bee_Moving3 {
           right: 28%;
+          height: 6%;
+        }
+
+        #Bee_Moving4 {
+          position: absolute;
+          bottom: 38%;
+          left: 20%;
           height: 5%;
+        }
+        #Bee_Moving5 {
+          position: absolute;
+          bottom: 38%;
+          right: 18%;
+          height: 6%;
         }
       }
 
@@ -175,6 +245,19 @@
           right: 33%;
         }
 
+
+        #Bee_Moving4 {
+          position: absolute;
+          bottom: 38%;
+          left: 25%;
+          height: 5%;
+        }
+        #Bee_Moving5 {
+          position: absolute;
+          bottom: 38%;
+          right: 23%;
+          height: 6%;
+        }
       }
 
       /* X-Large devices (large desktops, 1200px and up) */
@@ -188,6 +271,19 @@
         #Bee_Moving3 {
           right: 38%;
         }
+
+        #Bee_Moving4 {
+          position: absolute;
+          bottom: 38%;
+          left: 30%;
+          height: 5%;
+        }
+        #Bee_Moving5 {
+          position: absolute;
+          bottom: 38%;
+          right: 28%;
+          height: 6%;
+        }
       }
 
       /* XX-Large devices (larger desktops, 1400px and up) */
@@ -198,44 +294,7 @@
 
 
       
-      /* section 3*/
-      #Bee_Moving4 {
-        width:8%;
 
-        margin-top:10%;
-        margin-left: 15%;
-        -moz-transform:rotate(20deg);
-        -webkit-transform:rotate(20deg);
-        -o-transform:rotate(20deg);
-        -ms-transform:rotate(20deg);
-        transform:rotate(20deg);
-
-      }
-
-      #Bee_Moving5 {
-        width:8%;
-        display: block;
-        margin-top:5%;
-        margin-left: 70%;
-        -moz-transform:rotate(-25deg);
-        -webkit-transform:rotate(-25deg);
-        -o-transform:rotate(-25deg);
-        -ms-transform:rotate(-25deg);
-        transform:rotate(-25deg);
-
-      }
-      #Bee_Moving6 {
-        width:8%;
-
-        margin-top:5%;
-        margin-left: 25%;
-        -moz-transform:rotate(20deg);
-        -webkit-transform:rotate(20deg);
-        -o-transform:rotate(20deg);
-        -ms-transform:rotate(20deg);
-        transform:rotate(20deg);
-
-      }
 
       div, section, span, ul, li, a {
         box-sizing: border-box;
@@ -532,7 +591,7 @@
       }
       #elements_wrapper > img:first-child {
         /* footer_logo */
-        margin-top:40px;
+        margin-top:30px;
         margin-bottom: 20px;
         
         width: 150px;
@@ -542,13 +601,10 @@
       /* Terms, About */
       #elements_wrapper2 > a {
         display:block;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 10px;
       }
       #elements_wrapper2 > img {
         display:block;
-        margin-top: 20px;
-        margin-bottom: 20px;
       }
       #elements_wrapper2 img {
         width:40px;
@@ -572,11 +628,10 @@
         <img src="assets/img/LOGO.png" />
       </div>
 
-      
+      <!--
       <video id="Mitsu" autoplay loop muted playsinline>
           <source src="assets/video/Mitsu.webm" type="video/webm">
           <source src="assets/video/Mitsu.mov" type="video/quicktime">
-          <source src="assets/video/MITSU_before_converted.mov" type="video/quicktime">
       </video>
       <video id="Bee_Moving" autoplay loop muted playsinline>
         <source src="assets/video/Bee_Moving.webm#t=1" type="video/webm">
@@ -590,6 +645,11 @@
         <source src="assets/video/Bee_Moving.webm#t=0.7" type="video/webm">
         <source src="assets/video/Bee_Moving.mov#t=0.7" type="video/quicktime">
       </video>
+      -->
+      <img id="Mitsu" src="assets/video/Mitsu.gif" />
+      <img id="Bee_Moving" src="assets/video/Bee_Moving.gif" />
+      <img id="Bee_Moving2" src="assets/video/Bee_Moving.gif" />
+      <img id="Bee_Moving3" src="assets/video/Bee_Moving.gif" />
       <div id="icon_wrapper1">
         <a onClick=openInNewTab("https://twitter.com/beemove_nft")><img src="assets/img/twitter.png" /></a>
         <a onClick=openInNewTab("https://opensea.io/collection/bee-move")><img src="assets/img/opensea.png" /></a>
@@ -631,6 +691,7 @@
     </section>
 
     <section id="section3">
+      <!--
       <video id="Bee_Moving4" autoplay loop muted playsinline>
         <source src="assets/video/Bee_Moving.webm#t=1" type="video/webm">
         <source src="assets/video/Bee_Moving.mov#t=1" type="video/quicktime">
@@ -643,6 +704,9 @@
         <source src="assets/video/Bee_Moving.webm#t=0.5" type="video/webm">
         <source src="assets/video/Bee_Moving.mov#t=0.5" type="video/quicktime">
       </video>
+      -->
+      <img id="Bee_Moving4" src="assets/video/Bee_Moving.gif" />
+      <img id="Bee_Moving5" src="assets/video/Bee_Moving.gif" />
       <div id="button_wrapper2">
         <button id="button_dao" onClick=openInNewTab("https://snapshot.org/#/beemove.eth")>
           <img src="assets/img/DAO.png" />
